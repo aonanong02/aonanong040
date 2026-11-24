@@ -1,51 +1,142 @@
+```css
+/* ตั้งค่าพื้นฐาน */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-<!DOCTYPE html>
-<html lang="th">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ประวัติการศึกษา</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+body {
+    font-family: 'Prompt', sans-serif;
+    background: #fff7fa;
+    color: #555;
+    line-height: 1.8;
+}
 
-    <header>
-        <h1>ประวัติการศึกษา</h1>
-        <p>Education History</p>
-    </header>
+/* ส่วนหัวเว็บไซต์ */
+header {
+    text-align: center;
+    padding: 55px 20px 35px;
+}
 
-    <main>
-        <section class="profile">
-            <h2>ข้อมูลส่วนตัว</h2>
-            <p><strong>ชื่อ:</strong> อรอนงค์ บ้านหัวงิ้ว</p>
-            <p><strong>ชื่อภาษาอังกฤษ:</strong> Aonanong Kub</p>
-            <p><strong>งานอดิเรก:</strong> เล่นเกม ฟังเพลง</p>
-            <p><strong>วิชาที่ชอบ:</strong> Web Development</p>
-        </section>
+header h1 {
+    color: #d66b91;
+    font-size: 32px;
+    font-weight: 600;
+}
 
-        <h2 class="heading">ประวัติการศึกษา</h2>
+header p {
+    color: #b9a0aa;
+    font-size: 14px;
+    letter-spacing: 3px;
+}
 
-        <section class="school">
-            <h3>ระดับอนุบาล</h3>
-            <p>โรงเรียนอินทับโมลีสิงห์บุรี</p>
-        </section>
+/* ส่วนเนื้อหา */
+main {
+    max-width: 750px;
+    margin: auto;
+    padding: 20px;
+}
 
-        <section class="school">
-            <h3>ระดับประถมศึกษาปีที่ 1 – มัธยมศึกษาปีที่ 2</h3>
-            <p>โรงเรียนวัดสังฆราชาวาส</p>
-        </section>
+/* กล่องข้อมูลส่วนตัว */
+.profile {
+    background: white;
+    border-radius: 20px;
+    padding: 35px;
+    text-align: center;
+    box-shadow: 0 5px 25px rgba(214,107,145,0.08);
+    margin-bottom: 40px;
+    transition: 0.3s;
+}
 
-        <section class="school">
-            <h3>ระดับปัจจุบัน</h3>
-            <p>วิทยาลัยเทคนิคสิงห์บุรี</p>
-            <p>ระดับประกาศนียบัตรวิชาชีพ (ปวช.2)</p>
-            <p>แผนกเทคโนโลยีสารสนเทศ</p>
-        </section>
-    </main>
+.profile:hover {
+    transform: translateY(-3px);
+}
 
-    <footer>
-        <p>จัดทำโดย อรอนงค์ บ้านหัวงิ้ว</p>
-    </footer>
+/* รูปโปรไฟล์ */
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #f9dce7;
+    margin-bottom: 15px;
+    background: #fceaf1;
+}
 
-</body>
-</html>
+.profile h2 {
+    color: #d66b91;
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.profile p {
+    font-size: 14px;
+    margin: 7px 0;
+}
+
+/* หัวข้อประวัติการศึกษา */
+.heading {
+    color: #d66b91;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 23px;
+}
+
+/* กล่องโรงเรียน */
+.school {
+    background: white;
+    padding: 22px 28px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    border-left: 5px solid #e9a6bf;
+    transition: 0.3s;
+}
+
+.school:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 5px 20px rgba(214,107,145,0.12);
+}
+
+.school h3 {
+    color: #d66b91;
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+.school p {
+    font-size: 14px;
+    color: #777;
+}
+
+/* ส่วนท้าย */
+footer {
+    text-align: center;
+    padding: 25px;
+    margin-top: 30px;
+    color: #b9a0aa;
+    font-size: 13px;
+}
+
+/* รองรับโทรศัพท์ */
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 26px;
+    }
+
+    .profile {
+        padding: 25px 15px;
+    }
+
+    .profile-img {
+        width: 130px;
+        height: 130px;
+    }
+
+    .school {
+        padding: 18px;
+    }
+
+}
+```
